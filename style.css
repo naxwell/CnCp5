@@ -1,8 +1,9 @@
 html, body{
   overflow:hidden;
+  position: fixed;
 }
-.btn {
-    background-color: #4CAF50; /* Green */
+button {
+    background-color: #a83212; /* MaroonISH */
     border: none;
     color: white;
     padding: 15px 32px;
