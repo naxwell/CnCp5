@@ -69,11 +69,24 @@ function draw()
 //}
 
 if (onMode == true){
+  frameRate(5);
   var x = int(random(width));
   var y = int(random(height));
   fill(244, 200, 66);
   noStroke()
   ellipse(x, y, 100, 100);
+  
+  var x = int(random(width));
+  var y = int(random(height));
+  fill(244, 200, 86);
+  noStroke()
+  ellipse(x, y, 200, 200);
+  
+  var x = int(random(width));
+  var y = int(random(height));
+  fill(244, 180, 66);
+  noStroke()
+  ellipse(x, y, 400, 400);
 }
 
 }
