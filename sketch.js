@@ -1,22 +1,3 @@
-
-/* This was the random image puller I had on file from an old website that was used for reference
-  var random_images_array = [
-  "2cb70ef7-6218-4339-81cd-a524df4eae38%2Fclean.jpg?1508715562852", 
-  "2cb70ef7-6218-4339-81cd-a524df4eae38%2Fclean3.jpg?1508715562982", 
-  "2cb70ef7-6218-4339-81cd-a524df4eae38%2Fclean7.jpg?1508715563024", 
-  "2cb70ef7-6218-4339-81cd-a524df4eae38%2Fclean8.jpg?1508715563223"
-  ];
-
-function getRandomImage(imgAr, path) {
-    path = path || 'https://cdn.glitch.com/'; // default path here
-    var num = Math.floor( Math.random() * imgAr.length );
-    var img = imgAr[ num ];
-    return path + imgAr[ num ];
-    //var imgStr = '<img src="' + path + img + '" alt = "">';
-    //document.write(imgStr); document.close();
-}*/
-
-//Photo stamp stuff
 //var img
 var images 
 var imgNumber
@@ -24,16 +5,32 @@ var onMode
 
 function setup() 
 {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight); 
   onMode = true
-  img1 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2FDough_01.jpg?1509028698246");
-  img2 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2FDough_03.jpg?1509028698507");
-  img3 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2FDough_02.jpg?1509028698731");
-  img4 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2FDough_04.jpg?1509028698738");
-  images = [img1, img2, img3, img4];
-  imgNumber = random([0,1,2,3]);
-  console.log(imgNumber)
-  button = createButton('GIMME A NEW IMAGE');
+  img1 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_02.jpg?1509032640166");
+  img2 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_01.jpg?1509032640233");
+  img3 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_06.jpg?1509032640241");
+  img4 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_07.jpg?1509032640350");
+  img5 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_11.jpg?1509032640373");
+  img6 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_03.jpg?1509032640397");
+  img7 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_05.jpg?1509032640474");
+  img8 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_08.jpg?1509032640489");
+  img9 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_13.jpg?1509032640600");
+  img10 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_16.jpg?1509032640621");
+  img11 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_15.jpg?1509032640650");
+  img12 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_17.jpg?1509032640858");
+  img13 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_10.jpg?1509032641180");
+  img14 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_18.jpg?1509032641315");
+  img15 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_12.jpg?1509032641438");
+  img16 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_04.jpg?1509032641513");
+  img17 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_09.jpg?1509032641713");
+  img18 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_20.jpg?1509032641749");
+  img19 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_19.jpg?1509032642073");
+  img20 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fdough_14.jpg?1509032642428");
+  images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20];
+  imgNumber = random([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
+  
+  button = createButton('');
   button.position(width/2-50,100);
   button.mousePressed(nextImage);
   background('#fddc4d');
@@ -44,10 +41,11 @@ function setup()
 }
 function deviceShaken() {
   onMode = false;
+  button.hide();
 }
 
 function nextImage(){
-  if (imgNumber == 3){
+  if (imgNumber == 19){
     imgNumber=0
   }
   else {
@@ -63,15 +61,11 @@ function mouseDragged(){
 
 function draw() 
 {
+  console.log(imgNumber);
   
-  //image(images[2],0,0,width,height); //displays full screen image
-  // original copy code
-  //if(mouseIsPressed){ 
-    //copy(images[imgNumber], mouseX, mouseY, 100, 100, mouseX, mouseY, 100, 100);
-//}
 
 if (onMode == true){
-  frameRate(5);
+  frameRate(2);
   var x = int(random(width));
   var y = int(random(height));
   fill('#fbf8f1');
