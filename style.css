@@ -3,9 +3,9 @@ html, body{
   position: fixed;
 }
 button {
-    background-color: #a83212; /* MaroonISH */
+    background-color: #889293; /* grey */
     border: none;
-    color: white;
+    color: #fddc4d;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;

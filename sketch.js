@@ -26,17 +26,17 @@ function setup()
 {
   createCanvas(windowWidth, windowHeight);
   onMode = true
-  img1 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fbig-006.jpg?1508775846954");
-  img2 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fbig-017.jpg?1508775847016");
-  img3 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fbig-008.jpg?1508775847076");
-  img4 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2Fbig-002.jpg?1508775847452");
+  img1 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2FDough_01.jpg?1509028698246");
+  img2 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2FDough_03.jpg?1509028698507");
+  img3 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2FDough_02.jpg?1509028698731");
+  img4 = loadImage("https://cdn.glitch.com/2cb70ef7-6218-4339-81cd-a524df4eae38%2FDough_04.jpg?1509028698738");
   images = [img1, img2, img3, img4];
   imgNumber = random([0,1,2,3]);
   console.log(imgNumber)
   button = createButton('GIMME A NEW IMAGE');
   button.position(width/2-50,100);
   button.mousePressed(nextImage);
-  background(244, 200, 66);
+  background('#fddc4d');
   //button = createButton('KEEP IMAGE');
   //button.position (width/2-50,height/3);
   //button.mousePressed(stahp);
@@ -56,9 +56,11 @@ function nextImage(){
   onMode = true;
   background(244, 200, 66);
 }
+
 function mouseDragged(){
   copy(images[imgNumber], mouseX, mouseY, 200, 200, mouseX, mouseY, 200, 200);
 }
+
 function draw() 
 {
   
@@ -72,19 +74,19 @@ if (onMode == true){
   frameRate(5);
   var x = int(random(width));
   var y = int(random(height));
-  fill(244, 200, 66);
+  fill('#fbf8f1');
   noStroke()
   ellipse(x, y, 100, 100);
   
   var x = int(random(width));
   var y = int(random(height));
-  fill(244, 200, 86);
+  fill('#c36f05');
   noStroke()
   ellipse(x, y, 200, 200);
   
   var x = int(random(width));
   var y = int(random(height));
-  fill(244, 180, 66);
+  fill('#311102');
   noStroke()
   ellipse(x, y, 400, 400);
 }
